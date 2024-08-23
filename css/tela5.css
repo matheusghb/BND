@@ -1,5 +1,53 @@
-.menu {
-    width: 200px;
-    height: 900px;
+.retangulo2 {
+    width: 1500px;
+    height: 100px;
+    background-color: #F6D7A3;
+    position: relative;
+}
+
+.retangulo {
+    width: 100px;
+    height: 950px;
     background-color: #BD8A60;
+    position: absolute;
+}
+
+.retangulo3 {
+    width: 100px;
+    height: 200px;
+    background-color: #BD8A60;
+    position: absolute;
+}
+
+.retangulo4 {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #F6D7A3;
+    left: 35px;
+    bottom: 0px;
+    top: 40px;
+    right: 20px;
+}
+
+.retangulo5 {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #F6D7A3;
+    left: 0px;
+    bottom: 0px;
+    top: 10px;
+    right: 100px;
+}
+
+.retangulo6 {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #F6D7A3;
+    left: 0px;
+    bottom: 0px;
+    top: 10px;
+    right: 100px;
 }
