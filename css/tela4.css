@@ -1,5 +1,37 @@
-.menu {
-    width: 200px;
+.base {
+    width: 400px;
     height: 500px;
-    color:rgb(222, 180, 109)
+    color:#BD8A60;
+    position:absolute
+}
+
+.base2 {
+    width: 150px;
+    height: 150px;
+    color:aquamarine;
+    position: relative;
+}
+
+.coiso3 {
+    width: 150px;
+    height: 150px;
+    color:aquamarine;
+}
+
+.coiso4 {
+    width: 150px;
+    height: 150px;
+    color:aquamarine;
+}
+
+.coiso5 {
+    width: 150px;
+    height: 150px;
+    color:aquamarine;
+}
+
+.coiso6 {
+    width: 150px;
+    height: 150px;
+    color:aquamarine;
 }
