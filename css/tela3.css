@@ -3,13 +3,15 @@ h1 {
     padding-top: 6px;
     padding-left: 25px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 60px;
+    font-size: 40px;
 }
 
 .quadr {
     background-color: #BD8A60;
     width: 100%;
     border-radius: 15px;
-    height: 50px;
+    height: 70px;
 }
 
 body {
@@ -19,16 +21,43 @@ body {
 #sum {
     height: 50px;
     width: 50px;
-    left: 1450px;
-    bottom: 50px;
+    left: 90%;
+    bottom: 60px;
     position: relative
 }
 
 .quadr2 {
     background-color: #BD8A60;
-    width: 40px;
-    height: 100px;
-    position: relative;
-    top: 1085%;
+    width: 70px;
+    height: 400px;
+    position: fixed;
+    top: 405px;
+    right: 10px;
+    bottom: auto;
+    left: auto;
     border-radius: 50px;
+}
+
+#con {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 19px;
+    top: 450px;
+}
+
+#gear {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 19px;
+    top: 530px;
+}
+
+#lua {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 19px;
+    top: 600px;
 }
