@@ -1,17 +1,29 @@
+p {
+    color:#BD8A60;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    position:fixed;
+    top: 100px;
+    left: 40px
+}
+
+
 h1 {
     color: #F1E6C3;
-    padding-top: 6px;
-    padding-left: 25px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 60px;
     font-size: 40px;
+    position: fixed;
+    top: -13px;
+    left: 20px
 }
 
 .quadr {
     background-color: #BD8A60;
-    width: 100%;
+    width: 95%;
     border-radius: 15px;
     height: 70px;
+    position: fixed
 }
 
 body {
@@ -21,9 +33,9 @@ body {
 #sum {
     height: 50px;
     width: 50px;
-    left: 90%;
-    bottom: 60px;
-    position: relative
+    left: 85%;
+    top: 17px;
+    position: fixed;
 }
 
 .quadr2 {
@@ -32,7 +44,6 @@ body {
     height: 400px;
     position: fixed;
     top: 405px;
-    right: 10px;
     bottom: auto;
     left: auto;
     border-radius: 50px;
@@ -42,22 +53,61 @@ body {
     position: fixed;
     width: 50px;
     height: 50px;
-    right: 19px;
     top: 450px;
+    right: 95.4%;
 }
 
 #gear {
     position: fixed;
     width: 50px;
     height: 50px;
-    right: 19px;
     top: 530px;
+    right: 95.4%;
 }
 
 #lua {
     position: fixed;
     width: 50px;
     height: 50px;
-    right: 19px;
-    top: 600px;
+    top: 610px;
+    right: 95.4%;
+}
+
+.cub1 {
+    background-color: #f3edda;
+    position: absolute; 
+    width:900px;
+    height: 500px;
+    border-radius: 30px;
+    right: 100px;
+    top: 170px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #BD8A60;
+}
+
+.cub2 {
+    background-color: #f3edda;
+    position: absolute; 
+    width:900px;
+    height: 500px;
+    border-radius: 30px;
+    right: 100px;
+    top: 740px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #BD8A60;
+}
+
+.cub3 {
+    background-color: #f3edda;
+    position: absolute; 
+    width:900px;
+    height: 500px;
+    border-radius: 30px;
+    right: 100px;
+    top: 1310px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #BD8A60;
 }
