@@ -1,27 +1,126 @@
 .coiso {
     width: 500px;
-    height: 1500px;
+    height: 10000px;
     background-color: #BD8A60;
-    position: relative;
+    border-radius: 40px;
+    position: fixed;
 }
 
 .coiso2{
-    width: 600px;
-    height: 1500px;
-    background-color:aquamarine;
-    position: relative;
+    width: 476px;
+    height: 950px;
+    background-color: #F6D7A3;
+    position: fixed;
+    border-radius: 40px;
+    top: 50px;
+    right: 0px;
+    left: 20px;
+    bottom: 0px;
 }
 
 .coiso3 {
-    width: 150px;
-    height: 150px;
-    background-color:aquamarine;
+    width: 300px;
+    height: 50px;
+    position:fixed;
+    background-color:#F1E6C3;
+    border-color:#BD8A60;
+    border-radius: 400px;
+    border-width: 4px;
+    border-style: solid;
+    top: 120px;
+    right: 0px;
+    left: 30px;
+    bottom: 0px;
 }
 
 .coiso4 {
-    width: 150px;
-    height: 150px;
-    background-color:aquamarine;
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    background-color:#ff0000;
+    border-radius: 900px;
+    border-color: #BD8A60;
+    position:fixed;
+    top: 245px;
+    right: 0px;
+    left: 45px;
+    bottom:0px
+    ;
+}
+
+.coiso4a {
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    background-color:#f200ff;
+    border-radius: 900px;
+    border-color: #BD8A60;
+    position:fixed;
+    top: 245px;
+    right: 0px;
+    left: 75px;
+    bottom:0px
+    ;
+}
+
+.coiso4b {
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    background-color:#0011ff;
+    border-radius: 900px;
+    border-color: #BD8A60;
+    position:fixed;
+    top: 245px;
+    right: 0px;
+    left: 105px;
+    bottom:0px
+    ;
+}
+
+.coiso4c {
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    background-color:#00ff00;
+    border-radius: 900px;
+    border-color: #BD8A60;
+    position:fixed;
+    top: 245px;
+    right: 0px;
+    left: 135px;
+    bottom:0px
+    ;
+}
+
+.coiso4d {
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    background-color:#f6ff00;
+    border-radius: 900px;
+    border-color: #BD8A60;
+    position:fixed;
+    top: 280px;
+    right: 0px;
+    left: 45px;
+    bottom:0px
+    ;
+}
+
+.coiso4ad {
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    background-color:#ffffff;
+    border-radius: 900px;
+    border-color: #BD8A60;
+    position:fixed;
+    top: 280px;
+    right: 0px;
+    left: 75px;
+    bottom:0px
+    ;
 }
 
 .coiso5 {
@@ -34,4 +133,34 @@
     width: 150px;
     height: 150px;
     background-color:aquamarine;
+}
+
+.texto1 { 
+    
+    color: #BD8A60; 
+    margin: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-size: 50px; 
+    line-height: 180%;
+    position:fixed;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    left: -5px;
+    bottom: 0px;
+}
+
+.texto2 { 
+    
+    color: #BD8A60; 
+    margin: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-size: 50px; 
+    line-height: 180%;
+    position:fixed;
+    z-index: 1;
+    top: 110px;
+    right: 0px;
+    left: -5px;
+    bottom: 0px;
 }
