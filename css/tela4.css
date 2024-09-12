@@ -10,11 +10,14 @@
     width: 476px;
     height: 950px;
     background-color: #F6D7A3;
+    border-color: #BD8A60;
+    border-width: 10px;
+    border-style: solid;
     position: fixed;
     border-radius: 40px;
-    top: 50px;
+    top: 40px;
     right: 0px;
-    left: 20px;
+    left: 8px;
     bottom: 0px;
 }
 
@@ -132,7 +135,7 @@
     line-height: 180%;
     position:fixed;
     z-index: 1;
-    top: 0px;
+    top: 5.5px;
     right: 0px;
     left: -5px;
     bottom: 0px;
