@@ -1,11 +1,10 @@
 .rectangle {
-    width: 1500px;
-    height: 100px;
+    width: 95%;
+    height: 90px;
     background-color: #BD8A60;
     position: fixed;
-    text-align: center;
-    line-height: 1000%;
-    font-size: 50px;
+    left: 2.5%;
+    border-radius: 10px;
     color: #BD8A60;
 }
 
@@ -13,7 +12,7 @@
     width: 1px;
     height: 1px;
     background-color: #F1E6C3;
-    position: absolute;
+    position: fixed;
 }
 
 #but {
@@ -22,8 +21,8 @@
     background-color: #F1E6C3;
     border-radius: 40px;
     position: fixed;
-    left: 1350px;
-    top: 35px;
+    left: 85%;
+    top:4.5%;
     text-align: center;
     line-height: 200%;
     color: #BD8A60;
@@ -36,11 +35,45 @@
     background-color: #F1E6C3;
     border-radius: 40px;
     position: fixed;
-    left: 1230px;
-    top: 35px;
+    left: 75%;
+    top: 4.5%;
     text-align: center;
     line-height: 200%;
     color: #BD8A60;
     border-color: #F6D7A3;
     font-size: larger;
+}
+
+.vl {
+    border-left: 70px solid #BD8A60;
+    height: 620px;
+    border-radius: 20px;
+    position:fixed;
+}
+
+#t {
+    font-size: 70px;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 140px;
+    color:#BD8A60;
+}
+
+.vl2 {
+    border-left: 5px dotted #BD8A60;
+    height: 370px;
+    position: absolute;
+    left: 110px;
+    top: 160px
+}
+
+#l {
+    z-index: 2;
+    position: fixed;
+    color:#F1E6C3;
+    font-size: 50px;
+    top: -10px;
+    left: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
