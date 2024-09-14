@@ -1,53 +1,120 @@
 .retangulo2 {
-    width: 1500px;
+    width: 1505px;
     height: 100px;
     background-color: #F6D7A3;
-    position: relative;
+    position: fixed;
+    top: 0px;
 }
 
 .retangulo {
     width: 100px;
     height: 950px;
     background-color: #BD8A60;
-    position: absolute;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }
 
 .retangulo3 {
-    width: 100px;
-    height: 200px;
-    background-color: #BD8A60;
-    position: absolute;
+    position: fixed;
+    width: 30px;
+    height: 3px;
+    background-color: #F6D7A3;
+    left: 32px;
+    bottom: 0px;
+    top: 30px;
+    right: 0px;
 }
 
 .retangulo4 {
-    position: relative;
+    position: fixed;
     width: 30px;
-    height: 2px;
+    height: 3px;
     background-color: #F6D7A3;
-    left: 35px;
+    left: 32px;
     bottom: 0px;
-    top: 40px;
-    right: 20px;
+    top: 50px;
+    right: 0px;
 }
 
 .retangulo5 {
-    position: relative;
+    position: fixed;
     width: 30px;
     height: 3px;
     background-color: #F6D7A3;
-    left: 0px;
+    left: 32px;
     bottom: 0px;
-    top: 10px;
-    right: 100px;
+    top: 70px;
+    right: 0px;
 }
 
-.retangulo6 {
-    position: relative;
-    width: 30px;
-    height: 3px;
-    background-color: #F6D7A3;
-    left: 0px;
+#download {
+    position:fixed;
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: 100px;
+    right: 0px;
     bottom: 0px;
-    top: 10px;
-    right: 100px;
+    z-index: 2;
+}
+
+#pencil {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 200px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#arrows {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 400px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#square {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 600px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#ruler{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 800px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#eraser {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 1200px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#bucket {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 1000px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
 }
