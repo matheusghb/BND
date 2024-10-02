@@ -59,6 +59,9 @@ color: #F1E6C3;
     right: 490px;
     line-height: normal;
     font-size: large;
+    border-radius: 40px;
+    border-color:#BD8A60;
+    background-color:#F1E6C3;
 }
 
 #senha {
@@ -70,4 +73,8 @@ color: #F1E6C3;
     size: 60px;
     line-height: normal;
     font-size: large;
+    border-radius: 40px;
+    border-color:#BD8A60;
+    background-color: #F1E6C3;
+
 }
