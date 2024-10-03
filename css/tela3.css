@@ -125,3 +125,43 @@ body {
     border-style: solid;
     border-color: #BD8A60;
 }
+
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+
+    p {
+      color: #ffffff;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+
+    .quadr {
+      background-color: #333333;
+    }
+
+    .quadr2 {
+        background-color: #333333;
+    }
+    
+    .sum {
+      background-color: #444444;
+      border-color: #ffffff;
+    }
+    
+    .cub1, .cub2, .cub3 {
+      background-color: #555555;
+      border-color: #666666;
+    }
+    
+    input {
+      background-color: #777777;
+      color: #ffffff;
+    }
+    
+    img {
+      filter: invert(1); 
+    }
+  }
