@@ -1,5 +1,3 @@
-
-
 .coiso2{
     width: 476px;
     height: 950px;
@@ -165,16 +163,31 @@
     bottom: 0px;
 }
 
-.plus4 { 
-    background-color: #0011ff;
+#plus4 { 
+    border-color:#BD8A60;
+    border-radius: 20px;
+    border-style: solid;
     width: 20px;
     height: 20px;
     position:fixed; 
-    left: 72.5px; 
-    top: 277.5px;
+    left: 75px; 
+    top: 280px;
+    z-index: 3;
+}
+
+#checkm {
+    background-color:#8e6645;
+    border-color:#BD8A60;
+    border-radius: 50px;
+    border-style: solid;
+    width: 50px;
+    height: 50px;
+    position:fixed; 
+    left: 400px; 
+    top: 120px;
     right: 0px;
     bottom: 0px;
-    z-index: 1;
+    z-index: 4;
 }
 
 .backarrow4 {
@@ -257,7 +270,90 @@
     border-style: solid;
     color: #BD8A60;
     text-align:center;
+    z-index: 3;
  }
+
+ .dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+    
+    .coiso2 {
+      background-color: #333333;
+      border-color: #666666;
+    }
+    
+    .coiso3 {
+      background-color: #444444;
+      border-color: #666666;
+    }
+
+    .coiso4 {
+        border-color: #666666;
+    }
+
+    .coiso4a {
+        border-color: #666666;
+    }
+
+    .coiso4b {
+        border-color: #666666;
+    }
+
+    .coiso4c {
+        border-color: #666666;
+    }
+
+    .coiso4d {
+        border-color: #666666;
+    }
+
+    .coiso4ad {
+        border-color: #666666;
+    }
+
+    #plus4 {
+        background-color: #333333;
+        border-color: #666666;
+    }
+
+    #checkm {
+        background-color: #333333;
+        border-color: #666666;
+    }
+
+    .texto1 {
+      color: #ffffff;
+      border-color: #666666;
+    }
+    
+    .texto2 {
+      color: #ffffff;
+      border-color: #666666;
+    }
+
+    .texto3 {
+        color: #ffffff;
+        border-color: #666666;
+    }
+
+    .paper4 {
+        border-color: #666666;
+    }
+    
+    .linedpaper4 {
+        border-color: #666666;
+     }
+      
+    .dotted4 {
+        border-color: #666666;
+    }
+    
+    .container4 {
+      background-color: #333333;
+      color: #ffffff;
+      border-color: #666666;
+    }
+  }
 
  details {
     summary {
