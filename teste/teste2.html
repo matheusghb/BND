@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectar Clique do Mouse com Temporizador</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #display {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="display">Clique e segure por 2 segundos para ver as coordenadas!</div>
+
+    <script>
+        let isMouseDown = false;
+        let timer;
+
+        document.body.addEventListener('mousedown', function(event) {
+            isMouseDown = true;
+            timer = setTimeout(() => {
+                updateCoordinates(event);
+            }, 1500); // 2000 ms = 2 segundos
+        });
+
+        document.body.addEventListener('mouseup', function() {
+            isMouseDown = false;
+            clearTimeout(timer); // Cancela o temporizador se o mouse for liberado
+            document.getElementById('display').innerText = 'Clique e segure por 2 segundos para ver as coordenadas!';
+        });
+
+        document.body.addEventListener('mousemove', function(event) {
+            if (isMouseDown) {
+                updateCoordinates(event);
+            }
+        });
+
+        function updateCoordinates(event) {
+            const x = event.clientX;
+            const y = event.clientY;
+            document.getElementById('display').innerText = `Coordenadas: (${x}, ${y})`;
+        }
+    </script>
+</body>
+</html>
