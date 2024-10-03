@@ -42,6 +42,14 @@ background-color: #BD8A60;
 font-size: 20px;
 }
 
+#pat {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
+
 #email {
     position: fixed;
     width: 500px;
@@ -74,8 +82,3 @@ font-size: 20px;
     size: 60px;
 
 }
-
-#PATO
- 
-position: fixed;
-
