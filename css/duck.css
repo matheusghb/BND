@@ -1,0 +1,56 @@
+h1 {
+    color: #BD8A60;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    position: fixed;
+    top: 0%;
+    left: 31%;
+}
+
+#pato1 {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 15%;
+    left: 31%;
+}
+
+#pato2 {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+}
+
+#duck {
+    height: 300px;
+    width: 600px;
+    position: fixed;
+    top: 55.5%;
+    left: 31%;
+}
+
+#joia {
+    height: 600px;
+    width: 300px;
+    position: fixed;
+    top: 15%;
+    left: 15%;
+}
+
+#joia2 {
+    height: 600px;
+    width: 300px;
+    position: fixed;
+    top: 15%;
+    right: 15%;
+}
+
+#beback {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
