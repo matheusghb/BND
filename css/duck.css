@@ -1,4 +1,4 @@
-h1 {
+#h1 {
     color: #BD8A60;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 50px;
@@ -53,4 +53,17 @@ h1 {
     position: fixed;
     bottom: 0%;
     right: 0%;
+}
+
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+
+    #beback {
+        filter: invert(1);
+    }
+
+    #h1 {
+        color: #ffffff;
+    }
 }
