@@ -2,7 +2,7 @@ body {
     background-color: #F1E6C3;
 }
 
-h1 {
+#h1 {
     color: #BD8A60
 }
 
@@ -25,21 +25,25 @@ h1 {
 }
 
 .oi {
-background-color: #F1E6C3;
-position: fixed;
-width: 20px;
-height: 100%;
-left: 178px;
-bottom: 0px
+    background-color: #F1E6C3;
+    position: fixed;
+    width: 20px;
+    height: 100%;
+    left: 178px;
+    bottom: 0px
 
 }
 
 #bobesponja {
-position: fixed;
-right: 490px;
-top: 320px;
-background-color: #BD8A60;
-font-size: 20px;
+    position: fixed;
+    right: 490px;
+    top: 320px;
+    background-color: #BD8A60;
+    color: #F1E6C3;
+    font-size: 20px;
+    border-color: #F6D7A3;
+    border-radius: 40px;
+    border-style: solid;
 }
 
 #pat {
@@ -55,8 +59,13 @@ font-size: 20px;
     width: 500px;
     height: 50px;
     right: 490px;
+    top: 187px;
     line-height: normal;
     font-size: large;
+    border-radius: 40px;
+    border-color:#BD8A60;
+    background-color:#F1E6C3;
+    border-style: solid;
 }
 
 #senha {
@@ -64,10 +73,14 @@ font-size: 20px;
     width: 500px;
     height: 50px;
     right: 490px;
-    top: 230px;
+    top: 250px;
     size: 60px;
     line-height: normal;
     font-size: large;
+    border-radius: 40px;
+    border-color:#BD8A60;
+    background-color:#F1E6C3;
+    border-style: solid;
 }
 
 #username { 
@@ -80,5 +93,57 @@ font-size: 20px;
     font-size: large;
     top: 125px;
     size: 60px;
+    border-radius: 40px;
+    border-color:#BD8A60;
+    background-color:#F1E6C3;
+    border-style: solid;
 
+}
+
+.dark-mode {
+    background-color: #000000;
+
+    #h1{
+        color: #ffffff;
+    }
+
+    .qudr {
+        background-color: #333333;
+    }
+
+    .vert {
+        background-color: #333333;
+    }
+
+    .oi {
+        background-color: #555555;
+    }
+
+    #bobesponja {
+        background-color: #555555;
+        color: #ffffff;
+        border-color: #333333;
+    }
+
+    #email {
+        border-color: #555555;
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    #senha {
+        border-color: #555555;
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    #username {
+        border-color: #555555;
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    img {
+        filter: invert(1);
+    }
 }
