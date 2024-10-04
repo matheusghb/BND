@@ -87,3 +87,48 @@ color: #F1E6C3;
     bottom: 0%;
     right: 0.1%;
 }
+
+.dark-mode {
+    background-color: #000000;
+
+    .h1 {
+        color: #ffffff;
+    }
+
+    .qudr {
+        background-color: #555555;
+    }
+
+    .vert {
+        background-color: #555555;
+    }
+
+    .oi {
+        background-color: #555555;
+        border-color: #666666;
+    }
+
+    #bobesponja {
+        background-color: #555555;
+        color: #ffffff;
+    }
+
+    #ola {
+        background-color: #555555;
+        color: #ffffff;
+    }
+
+    #email {
+        background-color: #555555;
+        color: #ffffff;
+    }
+
+    #senha {
+        background-color: #555555;
+        color: #ffffff;
+    }
+
+    img {
+        filter: invert(1);
+    }
+}
