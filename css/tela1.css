@@ -2,7 +2,7 @@ body {
     background-color: #F1E6C3;
 }
 
-h1 {
+#h1 {
     color: #BD8A60
 }
 
@@ -24,22 +24,25 @@ h1 {
 }
 
 .oi {
-background-color: #F1E6C3;
-position: fixed;
-width: 20px;
-height: 100%;
-left: 178px;
-bottom: 0px
+    background-color: #F1E6C3;
+    position: fixed;
+    width: 20px;
+    height: 100%;
+    left: 178px;
+    bottom: 0px
 
 }
 
 #bobesponja {
-position: fixed;
-right: 490px;
-top: 320px;
-background-color: #BD8A60;
-font-size: 20px;
-color: #F1E6C3;
+    position: fixed;
+    right: 490px;
+    top: 320px;
+    background-color: #BD8A60;
+    font-size: 20px;
+    color: #F1E6C3;
+    border-color: #F6D7A3;
+    border-radius: 40px;
+    border-style: solid;
 }
 
 #ola { 
@@ -49,6 +52,9 @@ color: #F1E6C3;
     background-color: #BD8A60;
     font-size: 20px;
     color: #F1E6C3;
+    border-color: #F6D7A3;
+    border-radius: 40px;
+    border-style: solid;
 }
 
 
@@ -91,7 +97,7 @@ color: #F1E6C3;
 .dark-mode {
     background-color: #000000;
 
-    .h1 {
+    #h1 {
         color: #ffffff;
     }
 
@@ -111,21 +117,25 @@ color: #F1E6C3;
     #bobesponja {
         background-color: #555555;
         color: #ffffff;
+        border-color: #333333;
     }
 
     #ola {
         background-color: #555555;
         color: #ffffff;
+        border-color: #333333;
     }
 
     #email {
-        background-color: #555555;
+        background-color: #333333;
         color: #ffffff;
+        border-color: #555555;
     }
 
     #senha {
-        background-color: #555555;
+        background-color: #333333;
         color: #ffffff;
+        border-color: #555555;
     }
 
     img {
