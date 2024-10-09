@@ -71,6 +71,15 @@
     color:#BD8A60;
 }
 
+#t3 {
+    font-size: 70px;
+    position: absolute;
+    z-index: 1;
+    left: 140px;
+    top: 120px;
+    color: #BD8A60;
+}
+
 .vl2 {
     border-left: 5px dotted #BD8A60;
     height: 370px;
