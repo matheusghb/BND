@@ -170,13 +170,13 @@
     }
 
     #but {
-        background-color: #555555;
+        background-color: #333333;
         border-color: #666666;
         color: #ffffff;
     }
 
     #but2 {
-        background-color: #555555;
+        background-color: #333333;
         border-color: #666666;
         color: #ffffff;
     }
@@ -202,6 +202,10 @@
     }
 
     #t2 {
+        color: #ffffff;
+    }
+
+    #t3 {
         color: #ffffff;
     }
 
