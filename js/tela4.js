@@ -1,20 +1,14 @@
-document.getElementById('colorInput').addEventListener('input', function() {
-    const color = this.value;
-    
-    // Seleciona os slots
-    const slots = [
-        document.querySelector('.slot1'),
-        document.querySelector('.slot2'),
-        document.querySelector('.slot3'),
-        document.querySelector('.slot4'),
-        document.querySelector('.slot5')
-    ];
-
-    // Altera a cor de cada slot
-    slots.forEach(slot => {
-        slot.style.backgroundColor = color;
-    });
-});
-function adcor () {
-    
+var slotcor = document.getElementById("slot1");
+var slotcor_wrapper = document.getElementById("color-picker-wrapper");
+slotcor.onchange = function() {
+	slotcor_wrapper.style.backgroundColor = slotcor.value;    
 }
+
+var slots = document.querySelectorAll('.slot');
+var inputs = document.querySelectorAll('input[type="color"]');
+
+inputs.forEach((input, index) => {
+  input.onchange = function() {
+    slots[index].style.backgroundColor = input.value;
+  }
+});
