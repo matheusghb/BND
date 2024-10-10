@@ -223,6 +223,7 @@ input[type="color" i]::-webkit-color-swatch {
     #checkm {
         background-color: #333333;
         border-color: #666666;
+        filter: invert(1);
     }
 
     .texto1 {
@@ -252,10 +253,18 @@ input[type="color" i]::-webkit-color-swatch {
         border-color: #666666;
     }
     
-    .container4 {
+    .container4::before {
       background-color: #333333;
-      color: #ffffff;
       border-color: #666666;
+    }
+    #preview {
+        border-color: #666666;
+    }
+
+    #plus4{
+        filter: invert(1);
+        background-color: #333333;
+        border-color: #666666;
     }
   }
 
