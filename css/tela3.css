@@ -172,7 +172,19 @@ body {
       color: #ffffff;
     }
     
-    img {
+    #gear {
+      filter: invert(1); 
+    }
+
+    #con {
+      filter: invert(1); 
+    }
+
+    #luaaa {
+      filter: invert(1); 
+    }
+
+    #to {
       filter: invert(1); 
     }
   }
