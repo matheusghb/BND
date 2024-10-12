@@ -63,28 +63,25 @@ const ctx = canvas.getContext('2d');
 const pencilTool = document.getElementById('pencil-tool');
 const pencilIcon = document.getElementById('pencil-icon');
 
+let isPencilActive = false;
 let isDrawing = false;
-let lastX, lastY;
 
 pencilIcon.addEventListener('click', () => {
-  isDrawing = true;
+  isPencilActive = true;
 });
 
 canvas.addEventListener('mousedown', (e) => {
-  if (isDrawing) {
-    lastX = e.offsetX;
-    lastY = e.offsetY;
+  if (isPencilActive) {
+    isDrawing = true;
+    ctx.beginPath();
+    ctx.moveTo(e.offsetX, e.offsetY);
   }
 });
 
 canvas.addEventListener('mousemove', (e) => {
-  if (isDrawing) {
-    ctx.beginPath();
-    ctx.moveTo(lastX, lastY);
+  if (isPencilActive && isDrawing) {
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
-    lastX = e.offsetX;
-    lastY = e.offsetY;
   }
 });
 
