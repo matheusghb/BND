@@ -53,14 +53,22 @@
     z-index: 3;
 }
 
-#pencil {
+#canvas {
+    border: 1px solid #000;
+  }
+  
+#pencil-tool {
     position: fixed;
+    top: 0%;
+    left: 10%;
+    z-index: 2;
+  }
+  
+#pencil-icon {
     width: 100px;
     height: 100px;
-    left: 10%;
-    top: 0%;
-    z-index: 2;
-}
+    cursor: pointer;
+  }
 
 #arrows {
     position: fixed;
