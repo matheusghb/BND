@@ -62,33 +62,93 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const pencilTool = document.getElementById('pencil-tool');
 const pencilIcon = document.getElementById('pencil-icon');
+const colorInputs = document.querySelectorAll('input[type="color"]');
+const lineWidthSlider = document.getElementById('line-width-slider');
+const eraserTool = document.getElementById('eraser-tool');
+const eraserIcon = document.getElementById('eraser-icon');
 
-let isPencilActive = false;
-let isDrawing = false;
+const tools = {
+  pencil: {
+    isActive: false,
+    isDrawing: false,
+    selectedColor: '#000000',
+    selectedLineWidth: 5
+  },
+  eraser: {
+    isActive: false,
+    isDrawing: false,
+    selectedColor: '#ffffff',
+    selectedLineWidth: 5
+  }
+};
 
-pencilIcon.addEventListener('click', () => {
-  isPencilActive = true;
+
+// Add event listeners to color inputs
+colorInputs.forEach((input) => {
+  input.addEventListener('input', (e) => {
+    selectedColor = e.target.value;
+  });
 });
 
+// Add event listener to line width slider
+lineWidthSlider.addEventListener('input', (e) => {
+  selectedLineWidth = e.target.value;
+  ctx.lineWidth = selectedLineWidth; // atualize o valor da largura da linha
+});
+
+let isPencilActive = false;
+let isEraserActive = false;
+let isDrawing = false;
+
+// Adicione um evento de clique para o lápis
+pencilIcon.addEventListener('click', () => {
+  isPencilActive = true;
+  isEraserActive = false; // desative a borracha
+});
+
+// Adicione um evento de clique para a borracha
+eraserIcon.addEventListener('click', () => {
+  isEraserActive = true;
+  isPencilActive = false; // desative o lápis
+});
+
+// Adicione um evento de mousedown para o canvas
 canvas.addEventListener('mousedown', (e) => {
   if (isPencilActive) {
     isDrawing = true;
     ctx.beginPath();
     ctx.moveTo(e.offsetX, e.offsetY);
+    ctx.strokeStyle = selectedColor; // set the stroke style to the selected color
+    ctx.lineWidth = selectedLineWidth; // set the line width to the selected value
+  }
+  if (isEraserActive) {
+    isDrawing = true;
   }
 });
 
+// Adicione um evento de mousemove para o canvas
 canvas.addEventListener('mousemove', (e) => {
   if (isPencilActive && isDrawing) {
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
   }
+  if (isEraserActive && isDrawing) {
+    ctx.clearRect(e.offsetX, e.offsetY, eraserSize, eraserSize); // limpe a área com a borracha
+  }
 });
 
+// Adicione um evento de mouseup para o canvas
 canvas.addEventListener('mouseup', () => {
   isDrawing = false;
 });
 
+// Adicione um evento de mouseout para o canvas
 canvas.addEventListener('mouseout', () => {
   isDrawing = false;
+});
+
+// Rest of the code...
+
+document.getElementById('eraser-size-slider').addEventListener('input', (e) => {
+  eraserSize = e.target.value;
 });
