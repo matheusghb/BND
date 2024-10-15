@@ -54,7 +54,7 @@
 }
 
 #canvas {
-    border: 1px solid #000;
+    border: none;
   }
   
 #pencil-tool {
@@ -69,6 +69,43 @@
     height: 100px;
     cursor: pointer;
   }
+
+.vertical-slider {
+    position: fixed;
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 20px;
+    height: 200px;
+    margin: 20px;
+    bottom: 30%;
+    left: 1.2%;
+    z-index: 9;
+}
+
+#eraser-tool {
+  position: fixed;
+  left: 50%;
+  top: 0%;
+  z-index: 2;
+}
+
+#eraser-icon {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.vertical-slider-eraser {
+  position: fixed;
+  writing-mode: bt-lr; /* Muda a direção do slider para vertical */
+  -webkit-appearance: slider-vertical; /* Para navegadores WebKit */
+  width: 20px; /* Largura do slider */
+  height: 200px; /* Altura do slider */
+  margin: 20px; /* Margem para espaçamento */
+  bottom: 30%;
+  left: 1.2%; /* Posicione o slider à esquerda */
+  z-index: 9;
+}
 
 #arrows {
     position: fixed;
@@ -93,15 +130,6 @@
     width: 100px;
     height: 100px;
     left: 40%;
-    top: 0%;
-    z-index: 2;
-}
-
-#eraser {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    left: 50%;
     top: 0%;
     z-index: 2;
 }
