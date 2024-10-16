@@ -107,6 +107,19 @@
   z-index: 9;
 }
 
+#bucket-tool {
+  position: fixed;
+  left: 60%;
+  top: 0%;
+  z-index: 5;
+}
+
+#bucket-icon {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
 #arrows {
     position: fixed;
     width: 100px;
@@ -132,15 +145,6 @@
     left: 40%;
     top: 0%;
     z-index: 2;
-}
-
-#bucket {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    left: 60%;
-    top: 0%;
-    z-index: 5;
 }
 
 #color-box {
