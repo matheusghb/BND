@@ -83,71 +83,61 @@ const tools = {
 };
 
 
-// Add event listeners to color inputs
 colorInputs.forEach((input) => {
   input.addEventListener('input', (e) => {
     selectedColor = e.target.value;
   });
 });
 
-// Add event listener to line width slider
 lineWidthSlider.addEventListener('input', (e) => {
   selectedLineWidth = e.target.value;
-  ctx.lineWidth = selectedLineWidth; // atualize o valor da largura da linha
+  ctx.lineWidth = selectedLineWidth;
 });
 
 let isPencilActive = false;
 let isEraserActive = false;
 let isDrawing = false;
 
-// Adicione um evento de clique para o lápis
 pencilIcon.addEventListener('click', () => {
   isPencilActive = true;
-  isEraserActive = false; // desative a borracha
+  isEraserActive = false; 
 });
 
-// Adicione um evento de clique para a borracha
 eraserIcon.addEventListener('click', () => {
   isEraserActive = true;
-  isPencilActive = false; // desative o lápis
+  isPencilActive = false;
 });
 
-// Adicione um evento de mousedown para o canvas
 canvas.addEventListener('mousedown', (e) => {
   if (isPencilActive) {
     isDrawing = true;
     ctx.beginPath();
     ctx.moveTo(e.offsetX, e.offsetY);
-    ctx.strokeStyle = selectedColor; // set the stroke style to the selected color
-    ctx.lineWidth = selectedLineWidth; // set the line width to the selected value
+    ctx.strokeStyle = selectedColor;
+    ctx.lineWidth = selectedLineWidth;
   }
   if (isEraserActive) {
     isDrawing = true;
   }
 });
 
-// Adicione um evento de mousemove para o canvas
 canvas.addEventListener('mousemove', (e) => {
   if (isPencilActive && isDrawing) {
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
   }
   if (isEraserActive && isDrawing) {
-    ctx.clearRect(e.offsetX, e.offsetY, eraserSize, eraserSize); // limpe a área com a borracha
+    ctx.clearRect(e.offsetX, e.offsetY, eraserSize, eraserSize);
   }
 });
 
-// Adicione um evento de mouseup para o canvas
 canvas.addEventListener('mouseup', () => {
   isDrawing = false;
 });
 
-// Adicione um evento de mouseout para o canvas
 canvas.addEventListener('mouseout', () => {
   isDrawing = false;
 });
-
-// Rest of the code...
 
 document.getElementById('eraser-size-slider').addEventListener('input', (e) => {
   eraserSize = e.target.value;
