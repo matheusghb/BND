@@ -66,6 +66,8 @@ const colorInputs = document.querySelectorAll('input[type="color"]');
 const lineWidthSlider = document.getElementById('line-width-slider');
 const eraserTool = document.getElementById('eraser-tool');
 const eraserIcon = document.getElementById('eraser-icon');
+const bucketTool = document.getElementById('bucket-tool');
+const bucketIcon = document.getElementById('bucket-icon');
 
 const tools = {
   pencil: {
@@ -79,6 +81,11 @@ const tools = {
     isDrawing: false,
     selectedColor: '#ffffff',
     selectedLineWidth: 5
+  },
+  bucket: {
+    isActive: false,
+    isDrawing: false,
+    selectedColor: '#000000',
   }
 };
 
@@ -96,17 +103,26 @@ lineWidthSlider.addEventListener('input', (e) => {
 
 let isPencilActive = false;
 let isEraserActive = false;
+let isBucketActive = false;
 let isDrawing = false;
 
 pencilIcon.addEventListener('click', () => {
   isPencilActive = true;
   isEraserActive = false; 
+  isBucketActive = false;
 });
 
 eraserIcon.addEventListener('click', () => {
   isEraserActive = true;
   isPencilActive = false;
+  isBucketActive = false;
 });
+
+bucketIcon.addEventListener ('click', () => {
+  isBucketActive = true;
+  isEraserActive = false;
+  isPencilActive = false;
+})
 
 canvas.addEventListener('mousedown', (e) => {
   if (isPencilActive) {
@@ -118,6 +134,10 @@ canvas.addEventListener('mousedown', (e) => {
   }
   if (isEraserActive) {
     isDrawing = true;
+  }
+  if (isBucketActive) {
+    isDrawing = true;
+    ctx.strokeStyle = selectedColor;
   }
 });
 
