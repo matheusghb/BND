@@ -97,13 +97,13 @@
 
 .vertical-slider-eraser {
   position: fixed;
-  writing-mode: bt-lr; /* Muda a direção do slider para vertical */
-  -webkit-appearance: slider-vertical; /* Para navegadores WebKit */
-  width: 20px; /* Largura do slider */
-  height: 200px; /* Altura do slider */
-  margin: 20px; /* Margem para espaçamento */
+  writing-mode: bt-lr;
+  -webkit-appearance: slider-vertical;
+  width: 20px;
+  height: 200px;
+  margin: 20px;
   bottom: 30%;
-  left: 1.2%; /* Posicione o slider à esquerda */
+  left: 1.2%;
   z-index: 9;
 }
 
