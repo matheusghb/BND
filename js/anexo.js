@@ -1,28 +1,44 @@
-let IsMouseDown = false;
+let isMouseDown = false;
 let timer;
+x = 0;
+y = 0;
+let con = 1;
 
 document.body.addEventListener('mousedown', function(event) {
-    IsMouseDown = true;
+    isMouseDown = true;
     timer = setTimeout(() => {
-        uc(event);
-    }, 1500);
+        updateCoordinates(event);
+    }, 2000); // 2000 ms = 2 segundos
 });
 
-document.body.addEventListener('mouseup', function(){
-    IsMouseDown = false;
-    clearTimeout(timer);
-    document.getElementById('t').innerText = 'oi';
+document.body.addEventListener('mouseup', function() {
+    isMouseDown = false;
+    clearTimeout(timer); // Cancela o temporizador se o mouse for liberado
+    document.getElementById('display').innerText = 'Clique e segure por 2 segundos para ver as coordenadas!';
+    console.log('tirou')
+    console.log(x,y)
+    const bu = document.createElement('button');
+    bu.type = 'button';
+    bu.id = 'b';
+    bu.textContent = 'Número' + con;
+    bu.style.left = x + 'px';
+    bu.style.top = y + 'px';
+    bu.style.borderRadius = '40%';
+    bu.style.position = 'fixed';
+    bu.style.background = 'blue';
+
+    document.getElementById('display').appendChild(bu)
 });
 
-document.body.addEventListener('mousemove', function(event){
-    if (IsMouseDown) {
-        uc(event);
+document.body.addEventListener('mousemove', function(event) {
+    if (isMouseDown) {
+        updateCoordinates(event);
     }
 });
 
-function uc(event) {
-    const x = event.clientX;
-    const y = event.clientY;
-    document.getElementById('t').innerText = `Coordenadas: (${x}, ${y})`;
-    console.log(x,y)
+function updateCoordinates(event) {
+    x = event.clientX;
+    y = event.clientY;
+    document.getElementById('display').innerText = `Coordenadas: (${x}, ${y})`;
+    console.log({x},{y});
 }
