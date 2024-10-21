@@ -53,9 +53,9 @@
     z-index: 3;
 }
 
-#canvas {
-    border: none;
-  }
+#canvas{
+  border: none;
+}
   
 #pencil-tool {
     position: fixed;
@@ -120,12 +120,20 @@
   cursor: pointer;
 }
 
-#arrows {
+#leftA {
     position: fixed;
-    width: 100px;
-    height: 100px;
-    left: 20%;
-    top: 0%;
+    width: 70px;
+    height: 70px;
+    left: 18%;
+    top: 2.3%;
+    z-index: 2;
+}
+#rightA {
+  position: fixed;
+    width: 70px;
+    height: 70px;
+    left: 23%;
+    top: 2.3%;
     z-index: 2;
 }
 
@@ -138,7 +146,7 @@
     z-index: 2;
 }
 
-#ruler{
+#texto{
     position: fixed;
     width: 100px;
     height: 100px;
