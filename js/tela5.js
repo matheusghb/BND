@@ -105,6 +105,7 @@ let isPencilActive = false;
 let isEraserActive = false;
 let isBucketActive = false;
 let isDrawing = false;
+let eraserSize = 50;
 
 pencilIcon.addEventListener('click', () => {
   isPencilActive = true;
@@ -124,6 +125,39 @@ bucketIcon.addEventListener ('click', () => {
   isPencilActive = false;
 })
 
+function floodFill(x, y, targetColor, replacementColor) {
+  if (targetColor.toString() === replacementColor.toString()) return;
+
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  const stack = [[x, y]];
+
+  const getPixelIndex = (x, y) => (y * imageData.width + x) * 4;
+
+  while (stack.length) {
+    const [px, py] = stack.pop();
+    const pixelIndex = getPixelIndex(px, py);
+
+    if (data[pixelIndex] === targetColor[0] &&
+        data[pixelIndex + 1] === targetColor[1] &&
+        data[pixelIndex + 2] === targetColor[2] &&
+        data[pixelIndex + 3] === targetColor[3]) {
+      
+      data[pixelIndex] = replacementColor[0];
+      data[pixelIndex + 1] = replacementColor[1];
+      data[pixelIndex + 2] = replacementColor[2];
+      data[pixelIndex + 3] = replacementColor[3];
+
+      stack.push([px + 1, py]);
+      stack.push([px - 1, py]);
+      stack.push([px, py + 1]);
+      stack.push([px, py - 1]);
+    }
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+}
+
 canvas.addEventListener('mousedown', (e) => {
   if (isPencilActive) {
     isDrawing = true;
@@ -136,8 +170,16 @@ canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
   }
   if (isBucketActive) {
-    isDrawing = true;
-    ctx.strokeStyle = selectedColor;
+    const x = Math.floor(e.offsetX);
+    const y = Math.floor(e.offsetY);
+    const targetColor = ctx.getImageData(x, y, 1, 1).data; // Captura a cor do pixel
+    const replacementColor = [
+      parseInt(selectedColor.slice(1, 3), 16),
+      parseInt(selectedColor.slice(3, 5), 16),
+      parseInt(selectedColor.slice(5, 7), 16),
+      255 // Opacidade total
+    ];
+    floodFill(x, y, targetColor, replacementColor);
   }
 });
 
@@ -146,17 +188,38 @@ canvas.addEventListener('mousemove', (e) => {
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
   }
+  console.log("Mouse moved"); // Verifica se o evento está sendo chamado
+  console.log("Eraser active:", isEraserActive); // Verifica se a borracha está ativa
+  console.log("Eraser size:", eraserSize); // Verifica o tamanho da borracha
+
   if (isEraserActive && isDrawing) {
-    ctx.clearRect(e.offsetX, e.offsetY, eraserSize, eraserSize);
+    // Calcula as coordenadas centralizadas
+    const centerX = e.offsetX - eraserSize / 2;
+    const centerY = e.offsetY - eraserSize / 2;
+
+    // Limpa a área da borracha
+    ctx.clearRect(centerX, centerY, eraserSize, eraserSize);
+    
+    // Limpa o canvas de sobreposição
+    overlayCtx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
+
+    // Desenha a área da borracha como um quadrado no canvas de sobreposição
+    overlayCtx.strokeStyle = 'rgba(255, 0, 0, 0.5)'; // Cor da área da borracha (vermelho semi-transparente)
+    overlayCtx.lineWidth = 2; // Largura da borda
+    overlayCtx.strokeRect(centerX, centerY, eraserSize, eraserSize); // Desenha um quadrado
   }
 });
 
 canvas.addEventListener('mouseup', () => {
   isDrawing = false;
+  overlayCtx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height); // Limpa a área da borracha
+  ctx.drawImage(canvas, 0, 0); // Redesenha o conteúdo do canvas
 });
 
 canvas.addEventListener('mouseout', () => {
   isDrawing = false;
+  overlayCtx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height); // Limpa a área da borracha
+  ctx.drawImage(canvas, 0, 0); // Redesenha o conteúdo do canvas
 });
 
 document.getElementById('eraser-size-slider').addEventListener('input', (e) => {
